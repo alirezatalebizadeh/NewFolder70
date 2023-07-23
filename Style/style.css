@@ -249,58 +249,6 @@ body {
     padding-right: 1rem;
 }
 
-/* ================project responsive======================= */
-@media only screen and (max-width: 1200px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media only screen and (max-width: 992px) {
-    .container {
-        max-width: 720px;
-    }
-
-    .header__link {
-        display: none;
-    }
-}
-
-@media only screen and (max-width: 768px) {
-    .container {
-        max-width: 540px;
-    }
-
-    .header__icon {
-        display: block !important;
-    }
-
-    .menu {
-        /* display: none !important; */
-        position: fixed;
-        top: 0;
-        left: -256px;
-        bottom: 0;
-        background: blue;
-        flex-direction: column;
-        width: 16rem;
-        padding: 2rem 1rem;
-        transition: 1s all;
-    }
-
-    .menu__item {
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-    }
-
-}
-
-@media only screen and (max-width: 576px) {
-    .container {
-        max-width: 100%;
-    }
-}
-
 
 /* =======================header start========================= */
 .header-top {
@@ -342,6 +290,9 @@ body {
     font-size: 1.8rem;
     display: none;
     cursor: pointer;
+    position: fixed;
+    top: 1rem;
+    right: 5rem;
 }
 
 /*======================= header bottom================== */
@@ -377,6 +328,8 @@ body {
 .header-content__links {
     display: flex;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .header-content__link {
@@ -428,7 +381,14 @@ body {
     justify-content: space-around;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    flex-wrap: wrap;
 }
+
+.works-content__item {
+    flex-basis: 14rem;
+    flex-shrink: 0;
+}
+
 
 .works-content__title {
     color: #081D43;
@@ -604,4 +564,161 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+}
+
+
+/* ================project responsive======================= */
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .portfolio__item {
+        flex-basis: 28rem;
+    }
+
+    .newsletter__txt {
+        max-width: 28rem;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .header__link {
+        display: none;
+    }
+
+    .header-content {
+        flex-direction: column-reverse;
+    }
+
+    .header-bottom {
+        margin-top: 3rem;
+    }
+
+    .header-content_wrapper {
+        max-width: 100%;
+    }
+
+    .header-content__right {
+        margin-bottom: 2rem;
+    }
+
+    .header-content__link {
+        margin-bottom: 1rem;
+    }
+
+    .comments {
+        flex-wrap: wrap;
+    }
+
+    .comment {
+        flex-basis: 19rem;
+    }
+
+    .companies {
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
+
+    .portfolio__item {
+        flex-basis: 21rem;
+    }
+
+    .newsletter__txt {
+        max-width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .header__icon {
+        display: block !important;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -256px;
+        bottom: 0;
+        background: blue;
+        flex-direction: column;
+        width: 16rem;
+        padding: 2rem 1rem;
+        transition: 1s all;
+    }
+
+    .menu__item {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .menu__link {
+        color: #fff;
+    }
+
+    .works-content__item {
+        margin-bottom: 1.5rem;
+    }
+
+    .comment {
+        flex-basis: 15rem;
+        margin: 0 0 1.5rem 0;
+
+    }
+
+    .companies {
+        margin-top: 2rem !important;
+    }
+
+    .portfolio__item {
+        flex-basis: 100%;
+    }
+
+    .newsletter__wrapper {
+        flex-direction: column;
+    }
+
+    .newsletter__txt {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter__email {
+        flex-basis: auto;
+        max-width: 100%;
+    }
+
+    .newsletter {
+        padding: 2.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .works-content__item {
+        flex-basis: 100%;
+    }
+
+    .works-content__text {
+        max-width: 100%;
+    }
+
+    .comment {
+        flex-basis: 100%;
+    }
+
+    .newsletter__email {
+        padding: .3rem .3rem .3rem 0;
+    }
 }
